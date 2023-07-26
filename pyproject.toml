@@ -3,14 +3,15 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "py-bayes"
+name = "pybayes"
 version = "0.0.1"
 description = "notebooks and code for the exercises in Rethinking Statistics"
 readme = "README.md"
 authors = [
   {name = "William Grant", email = "hello@wpg.io"}
 ]
-dependencies = ["jupyterlab", "pre-commit", "flake8", "black"]
+dependencies = ["jupyterlab"]
 
 [project.optional-dependencies]
-dev = ["pytext"]
+dev = ["pytest", "pre-commit", "flake8", "black"]
+
