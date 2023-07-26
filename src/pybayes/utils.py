@@ -9,7 +9,7 @@ import scipy.stats
 import seaborn as sns
 
 
-def grid_approximate_binomial(n: int, k: int, grid_size: int, prior=None, plot=True) -> np.ndarray:
+def grid_approximate_binomial(n: int, k: int, grid_size: int, prior=None, plot=True, marker=None) -> np.ndarray:
     """Generate the posterior distribution over the range of possible p values for
     a binomial distribution, given observed n and k, and optional non-uniform prior.
     
@@ -28,7 +28,7 @@ def grid_approximate_binomial(n: int, k: int, grid_size: int, prior=None, plot=T
     posterior = posterior_unscaled / posterior_unscaled.sum()
     
     if plot:
-        plot_nicely(x_vals=p_grid, y_vals=posterior, marker='o', ylabel='posterior', xlabel='p')
+        plot_nicely(x_vals=p_grid, y_vals=posterior, marker=marker, ylabel='posterior', xlabel='p')
         
     return np.column_stack((p_grid, posterior))
 
