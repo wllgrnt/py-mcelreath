@@ -47,3 +47,13 @@ def plot_nicely(x_vals, y_vals, truncate=True, marker=None, ylabel=None, xlabel=
     if xlabel is not None:
         plt.xlabel(xlabel)
     plt.show()
+
+def hist(samples, ax=None):
+    """Plot a histogram of samples."""
+    if ax is None:
+        _, ax = plt.subplots() 
+    sns.histplot(samples, ax=ax, kde=False)
+    ax.set_ylabel('frequency')
+    plt.show()
+    return ax
+

@@ -10,7 +10,7 @@ readme = "README.md"
 authors = [
   {name = "William Grant", email = "hello@wpg.io"}
 ]
-dependencies = ["jupyterlab"]
+dependencies = ["jupyterlab", "arviz", "pymc", "numpy", "scipy", "seaborn", "matplotlib"]
 
 [project.optional-dependencies]
 dev = ["pytest", "pre-commit", "flake8", "black"]

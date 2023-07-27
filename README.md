@@ -10,3 +10,7 @@ The project structure is inspired by cookiecutter-ds and
 https://github.com/cthoyt/cookiecutter-snekpack, and faintly by DS from scratch by Joel Grus.
 
 Side note: this book is superbly written.
+
+Other side note: once I've finished all the exercises and notebooks I'll look at [the official PyMC
+port](https://github.com/pymc-devs/pymc-resources/tree/main/Rethinking) which will demonstrate how
+the pros do it.
