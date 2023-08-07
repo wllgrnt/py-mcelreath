@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pybayes"
+version = "0.0.1"
+description = "notebooks and code for the exercises in Rethinking Statistics"
+readme = "README.md"
+authors = [
+  {name = "William Grant", email = "hello@wpg.io"}
+]
+dependencies = ["jupyterlab", "arviz", "pymc", "numpy", "scipy", "seaborn", "matplotlib", "pandas", "watermark"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pre-commit", "flake8", "black"]
+
