@@ -5,6 +5,7 @@ Any function we use more than once in our notebooks ends up here.
 """
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import scipy.stats
 import seaborn as sns
 
@@ -57,3 +58,13 @@ def hist(samples, ax=None):
     plt.show()
     return ax
 
+def load_dataset(data_identifier: str) -> pd.DataFrame:
+    """Dataset should be one of ('howell', 'waffle_divorce')"""
+    match data_identifier:
+        case 'howell':
+            url = "https://raw.githubusercontent.com/rmcelreath/rethinking/master/data/Howell1.csv"
+        case 'waffle_divorce':
+            url = "https://raw.githubusercontent.com/rmcelreath/rethinking/master/data/WaffleDivorce.csv"
+        case _:
+            raise ValueError(f"Unknown dataset: {data_identifier}")
+    return pd.read_csv(url, sep=';')
